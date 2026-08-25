@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>語彙シェア会 2026-08-26 — 問いのindex</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --fg: #1f2328;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --accent: #b45309;
+    --accent-soft: #fef3e2;
+    --seed-bg: #f0f4f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --fg: #e6e6e3;
+      --muted: #9ca3af;
+      --card: #1f232b;
+      --border: #333842;
+      --accent: #f59e0b;
+      --accent-soft: #2c2416;
+      --seed-bg: #232936;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+  header h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+  header p.date { color: var(--muted); margin: 0 0 .5rem; font-size: .9rem; }
+  header p.lead { margin: 0 0 2rem; font-size: .95rem; color: var(--muted); }
+
+  details.term {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  details.term summary {
+    cursor: pointer;
+    padding: 1rem 1.25rem;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+  details.term summary::-webkit-details-marker { display: none; }
+  details.term summary::before {
+    content: "▸";
+    color: var(--accent);
+    flex: none;
+  }
+  details.term[open] summary::before { content: "▾"; }
+  .term-title { font-weight: 700; font-size: 1.05rem; }
+  .label {
+    flex: none;
+    font-size: .75rem;
+    padding: .1rem .5rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .oneline {
+    width: 100%;
+    margin-left: 1.4rem;
+    color: var(--muted);
+    font-size: .88rem;
+  }
+  .body { padding: 0 1.25rem 1.25rem 2.6rem; }
+  .body h3 {
+    font-size: .85rem;
+    color: var(--accent);
+    margin: 1.2rem 0 .3rem;
+    letter-spacing: .05em;
+  }
+  .body h3:first-child { margin-top: 0; }
+  .body p { margin: .3rem 0; font-size: .95rem; }
+  .body ul { margin: .3rem 0; padding-left: 1.3rem; font-size: .95rem; }
+  .body pre.example {
+    background: var(--seed-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    overflow-x: auto;
+    font-size: .82rem;
+    line-height: 1.6;
+    margin: .5rem 0 .8rem;
+  }
+  .body pre.example code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .fill {
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: .6rem 1rem;
+    color: var(--muted);
+    font-size: .88rem;
+    margin-top: .4rem;
+  }
+  .controls { margin-bottom: 1.5rem; }
+  .controls button {
+    font: inherit;
+    font-size: .85rem;
+    padding: .35rem .9rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+    cursor: pointer;
+    margin-right: .5rem;
+  }
+  .controls button:hover { border-color: var(--accent); color: var(--accent); }
+
+  section.agenda {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  section.agenda h2 { font-size: 1.05rem; margin: 0 0 .75rem; }
+  table.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+  }
+  table.timetable th, table.timetable td {
+    text-align: left;
+    padding: .45rem .6rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.timetable th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+  table.timetable td.time { white-space: nowrap; color: var(--accent); font-weight: 600; }
+  section.agenda p.note { font-size: .85rem; color: var(--muted); margin: .75rem 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>語彙シェア会 — 問いのindex</h1>
+    <p class="date">2026-08-26</p>
+    <p class="lead">発表者の好奇心に忠実な5語。理解度ラベル(◎説明できる / ○輪郭はわかる / ?気になるだけ)は発表者が自己申告で記入する。聴衆は概要を開く<strong>前に</strong>、まず各語への最初の問いを書き捨てること。</p>
+  </header>
+
+  <section class="agenda">
+    <h2>当日の進行(1人30分)</h2>
+    <table class="timetable">
+      <tr><th>時間</th><th>フェーズ</th><th>内容</th></tr>
+      <tr>
+        <td class="time">0:30</td>
+        <td>選定の来歴</td>
+        <td>「なぜこの5語だったか」を一言。情報摂取の経路も共有する</td>
+      </tr>
+      <tr>
+        <td class="time">2:00</td>
+        <td>語彙メニュー提示</td>
+        <td>5語のタイトル+一言+理解度ラベル(◎説明できる / ○輪郭はわかる / ?気になるだけ)を見せる</td>
+      </tr>
+      <tr>
+        <td class="time">3:00</td>
+        <td>問い書き捨て</td>
+        <td>聴衆は説明を聞く<strong>前に</strong>、各語への最初の問い・想像をチャットに書き捨てる。凝らない、書き捨てが大事</td>
+      </tr>
+      <tr>
+        <td class="time">12:00</td>
+        <td>好奇心投票 → 深掘り2語</td>
+        <td>聴衆が「一番聞きたい語」に投票し、2語に剪定してしっかり話す。「?」の語が選ばれたら解説の代わりに<strong>公開壁打ちモード</strong>(なぜ気になるか・どこで詰まったかを話し、全員+AIでその場で壁打ち)</td>
+      </tr>
+      <tr>
+        <td class="time">4:00</td>
+        <td>剪定外3語の概要</td>
+        <td>選ばれなかった3語も概要ベースで発表。5語すべてに発表責任がある</td>
+      </tr>
+      <tr>
+        <td class="time">8:00</td>
+        <td>対話</td>
+        <td>事前に書き捨てた問いと照らして「予想/期待と何が違ったか」を話す</td>
+      </tr>
+    </table>
+    <p class="note">深掘り語の発表テンプレ: ①その語彙は何か(1-2文) ②なぜ自分は引っかかったか(ここが本体) ③仕事にどう関係しそうか ④壁打ちハイライト(一番理解が進んだ質問と一番無駄だった質問を1つずつ) ⑤まだわかっていないこと。記録は聞いた側の誰かが1語彙1-2行残す。</p>
+  </section>
+
+  <div class="controls">
+    <button onclick="document.querySelectorAll('details.term').forEach(d=>d.open=true)">すべて開く</button>
+    <button onclick="document.querySelectorAll('details.term').forEach(d=>d.open=false)">すべて閉じる</button>
+  </div>
+
+  <!-- 1. オリエンティッド・ダイレクティッド -->
+  <details class="term">
+    <summary>
+      <span class="term-title">オリエンティッド・ダイレクティッド</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">「〜指向」と「有向」は対義語に見えて実は答えている問いが違う──プロダクト設計を語る2つの軸を混同しないための語彙整理</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>「オリエンティッド(-oriented/指向)」と「ダイレクティッド(directed/有向)」は、どちらもプロダクトや設計の性質を形容する言葉だが、答えている問いが違う。「〜指向」はシステムが何を中心に組み立てられているかという“レンズ”を指す接尾辞で、オブジェクト指向(1960年代のSimulaに始まりSmalltalk・C++で定着)、データ指向設計(ゲーム開発で普及、CPUキャッシュ効率を優先しクラス階層より配列的なデータレイアウトを重視する)、目標指向(ゲームAIのGOAP=Goal-Oriented Action Planningのようにゴールから逆算して行動を選ぶ設計)のように、「何を判断基準の中心に置くか」を宣言する。</p>
+      <p>一方「有向」は、要素間に明示的な順序や向きがあるかどうかを指す言葉。有向グラフ(directed graph)は矢印で依存や遷移の向きを持つグラフで、Gitのコミット履歴やMakeの依存解決、Airflow・GitHub ActionsのようなCI/CDパイプラインはすべてDAG(有向非巡回グラフ)としてモデル化される。ここでの「向き」は「これが終わったら次はこれ」という実行順序の話で、「何を目的に据えるか」という指向とは軸が違う。最初は対義語かと思いがちだが実際には両立する概念で、「ユーザー指向だが道筋は決め打ちの有向なロードマップ」も「データ指向だが分岐が多く非決定的な設計」もあり得る。プロダクト設計を語るときはこの2軸を分けて問うと輪郭がはっきりする。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 2. リモート認証 -->
+  <details class="term">
+    <summary>
+      <span class="term-title">リモート認証</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">指紋やFace IDでログインする裏側では、パスワードそのものが存在しない──秘密鍵を一切外に出さずに「本人であること」を証明する仕組み</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>WebAuthn(パスキーはその一般向けの呼び名)は、パスワードを一切使わずにログインするための仕組み。最初にサイトへ登録するとき、手元の端末(スマホやPC)が内部で「鍵のペア」を1組作る。片方は端末の中(指紋センサーやFace IDで保護された領域)に閉じ込められたまま外に出ない秘密鍵、もう片方はサーバーに送って保存してもらう公開鍵。パスワードのようにサーバーへ送って照合される秘密の文字列がそもそも存在しないので、サーバーがハッキングされて情報が漏れても、盗まれるのは公開鍵だけで悪用のしようがない。</p>
+      <p>ログインするときの流れはこうだ。①サーバーが「これに答えて」とランダムな乱数(チャレンジ)を送る。②端末は指紋やFace ID、PINでロックを解いて、端末内に眠っている秘密鍵でその乱数に署名する(秘密鍵自体はここでも一歩も外に出ない)。③その署名だけをサーバーに送り返し、サーバーは事前に預かっていた公開鍵で「確かにこの秘密鍵の持ち主が答えた」と検証する。指紋やFace IDは「本人確認のスイッチを入れる手段」であって、指紋データ自体がネットワークを流れるわけではない点も誤解されやすいポイント。また鍵はログインするサイトのドメインごとに別々に作られるため、そっくりな偽サイトを踏んでも、端末側がそもそも「このサイト用の鍵は持っていない」と判断して差し出さない。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 3. Proxyman -->
+  <details class="term">
+    <summary>
+      <span class="term-title">proxyman</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">アプリの通信を丸裸にして、バックエンドが無くてもフロントを作り、エラー画面も人工的に再現できる──開発を先に進めるためのプロキシツール</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>Proxymanはアプリ(スマホアプリやブラウザ)とサーバーの間に割り込んで、そこを流れる通信をそのまま見えるようにするツール。ローカルにルート証明書をインストールしておくことでHTTPS通信も復号して表示でき、「このアプリはどんなヘッダーを付けてリクエストしているか」「サーバーは実際どんなJSONを返しているか」を、コードを一切書かずに画面上で確認できる。iOS/Androidのシミュレータはもちろん、実機の通信もWi-Fi経由でプロキシを通せば同様に覗ける。</p>
+      <p>単に「見る」だけでなく、通信そのものを差し替えて開発を前に進められるのが実用上の価値。Map Local機能を使うと、サーバーからの実際のレスポンスをローカルのJSONファイルに置き換えられるため、バックエンドAPIがまだ完成していなくても「こう返ってくるはず」という値を仮置きしてフロント側のUIを先に作れる。Map Remoteはリクエストの向き先自体を別サーバー(たとえば手元のローカル開発サーバー)に切り替える機能。Breakpointを使えばリクエストやレスポンスをその場で書き換えて送受信できるので、通常操作では再現しにくいエラーレスポンスやタイムアウトを人工的に発生させ、アプリ側のエラーハンドリングを確認する、といった使い方もできる。サードパーティSDKが裏で何を送信しているかを覗いて、意図しないデータ送信がないか確かめる用途でも使われる。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 4. deploy -->
+  <details class="term">
+    <summary>
+      <span class="term-title">デプロイ</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">「ファイルをサーバーに置いた」だけでは終わらない──ローカル・ステージング・本番で変わる「デプロイ完了」の基準</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>「デプロイ」は一語で語られがちだが、実際には ビルド(ソースを実行可能な成果物にする) → 設定注入(環境変数・シークレット・接続先を対象環境用に切り替える) → 転送(コンテナイメージのpush、静的ファイルのアップロード、コードのsshなど) → 起動(プロセスやコンテナを立ち上げる) → 疎通(ヘルスチェックが通り、ロードバランサやDNSが新バージョンにトラフィックを向ける)という複数ステップの合成語。「ファイルがサーバーに置かれた」だけではデプロイ完了とは言えず、プロセスが実際に起動しヘルスチェックに応答し、かつ外部からのリクエストがそのバージョンに届いて初めて完了と呼べる。</p>
+      <p>この「完了」の基準は環境によって変わる。ローカル環境への「デプロイ」は多くの場合、ビルド〜起動までを自分のマシン上で完結させる作業で、本番同様のDockerイメージを <code>docker compose up</code> で立てたり <code>.env.local</code> で本番相当の設定を模したりする程度にとどまり、DNS切り替えやロードバランサへの登録といった疎通ステップは省略・簡略化される(localhostへの疎通は最初から成立しているため)。ステージング環境は本番と同じインフラ構成・デプロイ手順を使いつつ設定だけ切り替える「本番のリハーサル」で、QAや結合テストのゲートになる。本番環境ではさらにダウンタイムをどう扱うか(Blue-Green・Canary・Rolling Update)、失敗時にどう即座に戻すか(ロールバック)、デプロイ後の監視(エラー率・レイテンシのダッシュボード)までが「デプロイ」の責任範囲に含まれることが多く、環境が上がるほど「完了」の定義は「動いた」から「安全に切り替わり続けている」へと重くなっていく。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 5. CBOR・COSE -->
+  <details class="term">
+    <summary>
+      <span class="term-title">CBOR・COSE</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">JSONを小さくしたCBOR、それに署名と暗号化を足すCOSE──WebAuthnの裏側で認証と静かにつながっている低レイヤー標準</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>CBOR(Concise Binary Object Representation、RFC 8949)はJSONと同じデータモデル(マップ・配列・文字列・数値など)を、より小さく高速にパースできるバイナリ形式に落とし込んだもの。同じデータをJSONとCBORで並べると差がわかりやすい。</p>
+      <pre class="example"><code>// JSON(17バイト)
+{"a":1,"b":"hi"}
+
+// 同じ内容をCBORで表すと、9バイトの16進列になる
+A2 61 61 01 61 62 62 68 69
+  A2       → 要素数2の「マップ」であることを示す
+  61 61    → 長さ1の文字列 "a"
+  01       → 数値 1
+  61 62    → 長さ1の文字列 "b"
+  62 68 69 → 長さ2の文字列 "hi"</code></pre>
+      <p>クォートやコロン、カンマといった区切り文字を排除し、値の型と長さを1バイトのヘッダーに埋め込むことでサイズを落としている。整数やバイト列を可変長で詰め込めるほか、タグを使って日時やbignumのようなJSONにない型も表現できる自己記述的なフォーマットで、帯域や処理能力が厳しいIoT機器・組み込み向けに設計された。実際にはWebAuthnの認証器が返す <code>attestationObject</code> の実体がCBORであるなど、Web標準の内部フォーマットとしても使われている。</p>
+      <p>COSE(CBOR Object Signing and Encryption、RFC 9052/9053)はCBORデータに署名・暗号化・MACを付与する仕組みで、JOSE(JWS/JWE/JWK)のCBOR版に相当する。署名付きメッセージ(COSE_Sign1)は、実体はCBORの配列だが、JSON風に書くとこういう4要素になる。</p>
+      <pre class="example"><code>// COSE_Sign1 のイメージ(中身は本来CBORバイト列)
+[
+  { "1": -7 },              // 保護ヘッダー: alg = -7 (ES256)
+  {},                       // 非保護ヘッダー
+  "7b2261223a312c2262223a...",  // ペイロード(バイト列)
+  "3045022100d7d1a...b3f"       // 署名(バイト列)
+]</code></pre>
+      <p>JWTなら <code>{"alg":"ES256"}</code> と文字列で書くヘッダーを、COSEでは <code>{1: -7}</code> のようにキーも値も数値コードにして詰め込むため、この時点でさらに縮む。CWT(CBOR Web Token、RFC 8392)はこの仕組みでJWTに相当するトークンを組んだもの。実利用例として、ISO 18013-5で標準化されたモバイル運転免許証(mDL、Apple/Google Walletの運転免許証機能の裏側)やWebAuthnの署名検証にCOSEが使われており、前項の「リモート認証」(WebAuthn/パスキー)とはワイヤーフォーマットの層で直接つながっている。導入時はJSON運用に慣れたチームがバイナリのデバッグしにくさと鍵管理の実装コストを負う点が実務上のハードルになる。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+</main>
+</body>
+</html>
