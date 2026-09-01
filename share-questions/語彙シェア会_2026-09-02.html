@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>語彙シェア会 2026-09-02 — 問いのindex</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --fg: #1f2328;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --accent: #b45309;
+    --accent-soft: #fef3e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --fg: #e6e6e3;
+      --muted: #9ca3af;
+      --card: #1f232b;
+      --border: #333842;
+      --accent: #f59e0b;
+      --accent-soft: #2c2416;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+  header h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+  header p.date { color: var(--muted); margin: 0 0 .5rem; font-size: .9rem; }
+  header p.lead { margin: 0 0 2rem; font-size: .95rem; color: var(--muted); }
+
+  details.term {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  details.term summary {
+    cursor: pointer;
+    padding: 1rem 1.25rem;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+  details.term summary::-webkit-details-marker { display: none; }
+  details.term summary::before {
+    content: "▸";
+    color: var(--accent);
+    flex: none;
+  }
+  details.term[open] summary::before { content: "▾"; }
+  .term-title { font-weight: 700; font-size: 1.05rem; }
+  .label {
+    flex: none;
+    font-size: .75rem;
+    padding: .1rem .5rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .oneline {
+    width: 100%;
+    margin-left: 1.4rem;
+    color: var(--muted);
+    font-size: .88rem;
+  }
+  .body { padding: 0 1.25rem 1.25rem 2.6rem; }
+  .body h3 {
+    font-size: .85rem;
+    color: var(--accent);
+    margin: 1.2rem 0 .3rem;
+    letter-spacing: .05em;
+  }
+  .body h3:first-child { margin-top: 0; }
+  .body p { margin: .3rem 0; font-size: .95rem; }
+  .body ul { margin: .3rem 0; padding-left: 1.3rem; font-size: .95rem; }
+  .fill {
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: .6rem 1rem;
+    color: var(--muted);
+    font-size: .88rem;
+    margin-top: .4rem;
+  }
+  .questions {
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: .65rem .85rem;
+    font-size: .9rem;
+  }
+  .source {
+    color: var(--muted);
+    font-size: .78rem;
+    margin-top: .7rem;
+  }
+  .source a { color: inherit; }
+  .controls { margin-bottom: 1.5rem; }
+  .controls button {
+    font: inherit;
+    font-size: .85rem;
+    padding: .35rem .9rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+    cursor: pointer;
+    margin-right: .5rem;
+  }
+  .controls button:hover { border-color: var(--accent); color: var(--accent); }
+
+  section.agenda, section.memo {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  section.agenda h2, section.memo h2 { font-size: 1.05rem; margin: 0 0 .75rem; }
+  table.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+  }
+  table.timetable th, table.timetable td {
+    text-align: left;
+    padding: .45rem .6rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.timetable th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+  table.timetable td.time { white-space: nowrap; color: var(--accent); font-weight: 600; }
+  section.agenda p.note, section.memo p.note { font-size: .85rem; color: var(--muted); margin: .75rem 0 0; }
+  .tagline {
+    display: inline-block;
+    margin: .15rem .3rem .15rem 0;
+    padding: .15rem .5rem;
+    font-size: .75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>語彙シェア会 — 問いのindex</h1>
+    <p class="date">2026-09-02</p>
+    <p class="lead">
+      今回は「自分の仕事に近い語彙」と「最近の技術トレンド／考え方」を混ぜた6語。
+      理解度ラベル(◎説明できる / ○輪郭はわかる / ?気になるだけ)は発表者が自己申告で記入する。
+      聴衆は概要を開く<strong>前に</strong>、まず各語への最初の問いを書き捨てること。
+    </p>
+  </header>
+
+  <section class="agenda">
+    <h2>当日の進行（1人30分想定）</h2>
+    <table class="timetable">
+      <tr><th>時間</th><th>フェーズ</th><th>内容</th></tr>
+      <tr>
+        <td class="time">0:30</td>
+        <td>選定の来歴</td>
+        <td>「なぜこの6語だったか」を一言。どこで見聞きしたかも共有する。</td>
+      </tr>
+      <tr>
+        <td class="time">2:00</td>
+        <td>語彙メニュー提示</td>
+        <td>6語のタイトル＋一言＋理解度ラベルを見せる。</td>
+      </tr>
+      <tr>
+        <td class="time">3:00</td>
+        <td>問い書き捨て</td>
+        <td>説明を聞く<strong>前に</strong>、各語への最初の問い・想像をチャットに書く。</td>
+      </tr>
+      <tr>
+        <td class="time">11:00</td>
+        <td>好奇心投票 → 深掘り2語</td>
+        <td>「一番聞きたい語」に投票して2語を深掘り。「?」が選ばれたら公開壁打ちモードで進める。</td>
+      </tr>
+      <tr>
+        <td class="time">5:00</td>
+        <td>残り4語の概要</td>
+        <td>選ばれなかった語も概要だけ共有。6語すべてに発表責任を持つ。</td>
+      </tr>
+      <tr>
+        <td class="time">8:30</td>
+        <td>対話</td>
+        <td>最初の予想と実際の説明を比べ、「何が意外だったか」を話す。</td>
+      </tr>
+    </table>
+    <p class="note">
+      深掘り語の基本テンプレ：①その語彙は何か ②なぜ自分は引っかかったか ③仕事にどう関係しそうか
+      ④一番理解が進んだ質問 ⑤まだわかっていないこと。
+    </p>
+  </section>
+
+  <div class="controls">
+    <button onclick="document.querySelectorAll('details.term').forEach(d=>d.open=true)">すべて開く</button>
+    <button onclick="document.querySelectorAll('details.term').forEach(d=>d.open=false)">すべて閉じる</button>
+  </div>
+
+  <!-- 1. Circuit Breaker -->
+  <details class="term">
+    <summary>
+      <span class="term-title">サーキットブレイカー</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">障害が続く相手への呼び出しを一時的に遮断し、システム全体への連鎖障害を防ぐレジリエンス・パターン</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>
+        分散システムでは、呼び出し先のサービスが遅い・落ちている・タイムアウトしている状態でも、
+        呼び出し元がリトライを続けると、負荷をさらに増やして障害を広げることがある。
+        サーキットブレイカーは、失敗が一定条件を超えたら呼び出しを一時的に止め、
+        復旧するまで「失敗させる」「代替経路を使う」などに切り替える考え方。
+      </p>
+      <p>
+        電気のブレーカーになぞらえ、「普段は通す」「異常時は遮断する」「しばらくして復旧確認する」
+        という状態遷移で考えるのがポイント。Retryとは目的が異なり、Retryが「一時的な失敗をもう一度試す」
+        のに対し、Circuit Breakerは「試し続けない」ための仕組み。
+      </p>
+      <h3>なぜ引っかかったか（発表者記入）</h3>
+      <div class="fill">ここに、自分がタスク・障害対応・設計レビューなどでこの言葉に出会ったきっかけを書く</div>
+      <h3>仕事との接点</h3>
+      <p>
+        共通認証基盤や外部サービス連携では、認証・認可・eKYCなど複数のリモート依存先が存在し得る。
+        ある依存先の障害を、呼び出し元のタイムアウトやリトライが増幅してしまわないか、という観点で考えられる。
+      </p>
+      <h3>深掘りしたい問い</h3>
+      <div class="questions">
+        「RetryとCircuit Breakerはどこまでセットで設計する？」「Open / Half-Open / Closedの境界は何で決める？」
+      </div>
+      <div class="source">
+        参考：Microsoft Azure Architecture Center「サーキット ブレーカー パターン」
+      </div>
+    </div>
+  </details>
+
+  <!-- 2. Liveness Detection -->
+  <details class="term">
+    <summary>
+      <span class="term-title">Liveness Detection</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">顔などの生体情報について、「本人に似ている」だけでなく「実際にその場にいる生身の対象か」を確認する技術</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>
+        Liveness Detectionは、生体情報を取得している対象が「その場に存在する生きた人間」なのかを判定し、
+        写真・表示画像・動画などを使ったPresentation Attack（なりすまし）への耐性を高める考え方。
+        NISTの用語整理では、Liveness DetectionはPresentation Attack Detection（PAD）の一部として、
+        生きた対象の解剖学的特徴や自発・非自発的な反応などを測定・分析する方法と説明されている。
+      </p>
+      <p>
+        eKYCで考えると、「顔画像と身分証の顔が一致する（Face Matching）」と
+        「今カメラの前にいるのが生身の本人である（Liveness）」は別の問い。
+        そのため、本人確認を「書類」「本人性」「存在性」と分解して考えるきっかけになる。
+      </p>
+      <h3>なぜ引っかかったか（発表者記入）</h3>
+      <div class="fill">ここに、JPKI・本人確認・eKYCの仕事の中で気になったきっかけを書く</div>
+      <h3>仕事との接点</h3>
+      <p>
+        デジタルな本人確認だけでなく、カメラを使った本人確認では「なりすましをどう防ぐか」が重要になる。
+        JPKIのような電子証明書ベースの本人確認と、画像・生体を使う本人確認が「何をもって本人とするのか」
+        という異なるアプローチを持つ点も比較しやすい。
+      </p>
+      <h3>深掘りしたい問い</h3>
+      <div class="questions">
+        「写真・動画・ディープフェイクをどう区別する？」「Passive / Active Livenessの違いは？」
+      </div>
+      <div class="source">
+        参考：NIST SP 800-63-4 / NIST Glossary「Presentation Attack Detection」
+      </div>
+    </div>
+  </details>
+
+  <!-- 3. BFF -->
+  <details class="term">
+    <summary>
+      <span class="term-title">BFF（Backend for Frontends）</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">フロントエンドごとの要求に合わせた専用Backendを、クライアントと共通Backendの間に置くアーキテクチャパターン</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>
+        BFFは、Web・モバイルなど異なるクライアントに対して、それぞれのUIに適したAPI層を用意するパターン。
+        BFFはフロントエンドとバックエンドの間に入り、データ取得・集約・変換などを、そのクライアントに必要な形へ寄せる。
+      </p>
+      <p>
+        共通Backendにすべてのフロントエンド都合を詰め込むと、UIごとの要求が衝突し、変更やデプロイのボトルネックになる。
+        一方、BFFを増やせばサービス数・運用対象も増えるため、「本当にBFFを置く価値があるか」
+        「API GatewayやGraphQLで十分ではないか」というトレードオフがある。
+      </p>
+      <h3>なぜ引っかかったか（発表者記入）</h3>
+      <div class="fill">ここに、自分のフロントエンド/API構成や設計議論との接点を書く</div>
+      <h3>仕事との接点</h3>
+      <p>
+        認証基盤のような共通サービスでは、Web・モバイル・管理画面などクライアントごとに必要な認証フローや
+        データの粒度が異なる可能性がある。BFFを置いた場合、認証・認可をどこで担保するかという設計議論にもつながる。
+      </p>
+      <h3>深掘りしたい問い</h3>
+      <div class="questions">
+        「BFFとAPI Gatewayは何が違う？」「BFFに認証・認可をどこまで持たせる？」「BFFはいつ不要になる？」
+      </div>
+      <div class="source">
+        参考：Microsoft Azure Architecture Center「Backends for Frontends Pattern」
+      </div>
+    </div>
+  </details>
+
+  <!-- 4. AI Harness -->
+  <details class="term">
+    <summary>
+      <span class="term-title">AI Harness</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">LLMそのものではなく、モデルにツール・コンテキスト・実行環境・検証・安全制御などを与え、Agentとして仕事をさせる仕組み</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>
+        「AI Harness / harness engineering」は、LLM単体ではなく、LLMを取り巻く実行系を設計するという文脈で使われる新しい語彙。
+        OpenAIは2026年、Codexを使った開発で、エンジニアの役割が「コードを書く」だけでなく、
+        エージェントが信頼して作業できる環境・制約・フィードバックループを設計することへ移る、と説明している。
+      </p>
+      <p>
+        Codexの文脈では、Agent Loop、ツール実行、サンドボックス、コンテキスト管理、スレッド状態・認証、
+        検証や人間の承認などが「モデルの外側」にある。つまり「良いモデルを選べば終わり」ではなく、
+        そのモデルを<strong>どういう環境で、何に触れさせ、どう失敗させ、どう検証するか</strong>までがプロダクト品質になる。
+      </p>
+      <h3>なぜ引っかかったか（発表者記入）</h3>
+      <div class="fill">ここに、AI Agent / Claude Code / Codexなどを使っていて「ハーネス」という言葉に出会ったきっかけを書く</div>
+      <h3>仕事との接点</h3>
+      <p>
+        Webエンジニア視点では、Harnessを「AI版の実行基盤」と捉えると理解しやすい。
+        ツール権限、ネットワーク、シークレット、サンドボックス、監査ログ、リトライ、承認などは、
+        まさに本番システムで考えてきた「信頼できる実行環境」の問題でもある。
+        とくに認証基盤チームでは、AI Agentに人間の権限をどう委譲するかという問いとも接続する。
+      </p>
+      <h3>深掘りしたい問い</h3>
+      <div class="questions">
+        「AgentとHarnessの境界はどこ？」「MCPはHarnessの一部なのか？」「AI AgentにOAuthの権限をどう与える？」
+      </div>
+      <div class="source">
+        参考：OpenAI「Harness engineering: leveraging Codex in an agent-first world」
+        ／ OpenAI「Unlocking the Codex harness」
+      </div>
+    </div>
+  </details>
+
+  <!-- 5. DPoP -->
+  <details class="term">
+    <summary>
+      <span class="term-title">DPoP（Demonstrating Proof of Possession）</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">OAuth 2.0のトークンを「持っているだけ」ではなく、対応する秘密鍵を持っていることと結び付ける仕組み</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>
+        OAuth 2.0のBearer Tokenでは、トークンを盗まれると、そのトークンを持つ第三者が再利用できる可能性がある。
+        DPoPは、クライアントが公開鍵・秘密鍵のペアを持ち、HTTPリクエストごとにDPoP proofを提示することで、
+        アクセストークン／リフレッシュトークンをその鍵の所持と結び付ける仕組み。
+      </p>
+      <p>
+        RFC 9449では、DPoPはOAuth 2.0トークンを「sender-constrained」にするアプリケーション層の仕組みとして定義され、
+        トークンのリプレイ攻撃を検出できるようにしている。つまり、「トークンを盗まれたら終わり」から
+        「トークン＋対応する秘密鍵の所持が必要」という設計へ一段階進める発想。
+      </p>
+      <h3>なぜ引っかかったか（発表者記入）</h3>
+      <div class="fill">ここに、OAuth/OIDCやアクセストークンの設計・実装で気になったきっかけを書く</div>
+      <h3>仕事との接点</h3>
+      <p>
+        共通認証基盤を設計する立場では、「アクセストークンを盗まれた場合の被害をどう抑えるか」という脅威モデルに直結する。
+        JWT / Opaque Token、mTLSなどと並べて、どのケースでsender constraintが必要になるのか考えられる。
+      </p>
+      <h3>深掘りしたい問い</h3>
+      <div class="questions">
+        「Bearer Tokenと何が変わる？」「DPoP proofはどうリプレイを防ぐ？」「mTLSとDPoPはどう使い分ける？」
+      </div>
+      <div class="source">
+        参考：IETF RFC 9449「OAuth 2.0 Demonstrating Proof of Possession (DPoP)」
+      </div>
+    </div>
+  </details>
+
+  <!-- 6. Jevons Paradox -->
+  <details class="term">
+    <summary>
+      <span class="term-title">ジェヴォンズのパラドックス</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">資源の利用効率が上がると、単位コストが下がって利用が増え、結果として総消費量が増えることがあるという逆説</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>
+        ジェヴォンズのパラドックスは、資源利用の効率化が、その資源の総消費量を必ずしも減らさないどころか、
+        需要を押し上げて総消費量を増やすことがある、という経済上の考え方。
+        19世紀にWilliam Stanley Jevonsが、石炭を効率よく利用できる技術が進んでも
+        石炭消費が増え得ることを論じたのが名前の由来。
+      </p>
+      <p>
+        ソフトウェアでも「1処理あたりのコスト・時間が下がると、同じ量を安く処理する」のではなく、
+        「今まで高すぎてやっていなかった処理まで大量にやる」ことがある。
+        たとえばAIの推論コストや開発コストが下がると、1回あたりの効率化がそのまま利用量削減になるとは限らない、
+        という問いにつなげられる。
+      </p>
+      <h3>なぜ引っかかったか（発表者記入）</h3>
+      <div class="fill">ここに、AI・クラウド・開発生産性などでこの言葉に出会ったきっかけを書く</div>
+      <h3>仕事との接点</h3>
+      <p>
+        「性能向上＝コスト削減」と単純に考えず、効率化によって新しい需要が生まれないかを見るための思考道具になる。
+        AI Agentの利用量、APIコール数、ログ量、クラウドリソースなど、開発・運用コストの議論にも応用できる。
+      </p>
+      <h3>深掘りしたい問い</h3>
+      <div class="questions">
+        「AIでジェヴォンズのパラドックスは本当に起きる？」「効率化とコスト削減を両立させるには？」
+      </div>
+      <div class="source">
+        参考：Jevons paradoxの一般的な経済学上の定義
+      </div>
+    </div>
+  </details>
+
+  <section class="memo">
+    <h2>今回の6語を選んだ意図（発表者メモ）</h2>
+    <p>
+      <span class="tagline">eKYC / Security</span>
+      <span class="tagline">Distributed Systems</span>
+      <span class="tagline">Web Architecture</span>
+      <span class="tagline">AI</span>
+      <span class="tagline">OAuth / Identity</span>
+      <span class="tagline">Technology × Economics</span>
+    </p>
+    <p>
+      認証基盤・eKYCに直接つながる語（Liveness Detection、DPoP）、
+      普段のWeb開発で使う設計パターン（BFF、サーキットブレイカー）、
+      AI時代の新しい開発概念（AI Harness）、
+      技術を少し離れて「効率化すると逆に利用が増える」という視点をくれる語（ジェヴォンズのパラドックス）
+      を混ぜた。
+    </p>
+    <p class="note">
+      「6個全部説明すること」より、「最初の問いを作る → 2語を深掘りする → 他の4語も概要を持ち帰る」を優先する。
+    </p>
+  </section>
+</main>
+</body>
+</html>

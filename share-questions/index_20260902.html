@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>語彙シェア会 2026-09-02 — 問いのindex</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --fg: #1f2328;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --accent: #b45309;
+    --accent-soft: #fef3e2;
+    --seed-bg: #f0f4f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --fg: #e6e6e3;
+      --muted: #9ca3af;
+      --card: #1f232b;
+      --border: #333842;
+      --accent: #f59e0b;
+      --accent-soft: #2c2416;
+      --seed-bg: #232936;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+  header h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+  header p.date { color: var(--muted); margin: 0 0 .5rem; font-size: .9rem; }
+  header p.lead { margin: 0 0 2rem; font-size: .95rem; color: var(--muted); }
+
+  details.term {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  details.term summary {
+    cursor: pointer;
+    padding: 1rem 1.25rem;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+  details.term summary::-webkit-details-marker { display: none; }
+  details.term summary::before {
+    content: "▸";
+    color: var(--accent);
+    flex: none;
+  }
+  details.term[open] summary::before { content: "▾"; }
+  .term-title { font-weight: 700; font-size: 1.05rem; }
+  .label {
+    flex: none;
+    font-size: .75rem;
+    padding: .1rem .5rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .oneline {
+    width: 100%;
+    margin-left: 1.4rem;
+    color: var(--muted);
+    font-size: .88rem;
+  }
+  .body { padding: 0 1.25rem 1.25rem 2.6rem; }
+  .body h3 {
+    font-size: .85rem;
+    color: var(--accent);
+    margin: 1.2rem 0 .3rem;
+    letter-spacing: .05em;
+  }
+  .body h3:first-child { margin-top: 0; }
+  .body p { margin: .3rem 0; font-size: .95rem; }
+  .body ul { margin: .3rem 0; padding-left: 1.3rem; font-size: .95rem; }
+  .fill {
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: .6rem 1rem;
+    color: var(--muted);
+    font-size: .88rem;
+    margin-top: .4rem;
+  }
+  .controls { margin-bottom: 1.5rem; }
+  .controls button {
+    font: inherit;
+    font-size: .85rem;
+    padding: .35rem .9rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+    cursor: pointer;
+    margin-right: .5rem;
+  }
+  .controls button:hover { border-color: var(--accent); color: var(--accent); }
+
+  section.agenda {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  section.agenda h2 { font-size: 1.05rem; margin: 0 0 .75rem; }
+  table.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+  }
+  table.timetable th, table.timetable td {
+    text-align: left;
+    padding: .45rem .6rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.timetable th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+  table.timetable td.time { white-space: nowrap; color: var(--accent); font-weight: 600; }
+  section.agenda p.note { font-size: .85rem; color: var(--muted); margin: .75rem 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>語彙シェア会 — 問いのindex</h1>
+    <p class="date">2026-09-02</p>
+    <p class="lead">発表者の好奇心に忠実な語彙リスト。理解度ラベル(◎説明できる / ○輪郭はわかる / ?気になるだけ)は発表者が自己申告で記入する。聴衆は概要を開く<strong>前に</strong>、まず各語への最初の問いを書き捨てること。</p>
+  </header>
+
+  <section class="agenda">
+    <h2>当日の進行(1人30分)</h2>
+    <table class="timetable">
+      <tr><th>時間</th><th>フェーズ</th><th>内容</th></tr>
+      <tr>
+        <td class="time">0:30</td>
+        <td>選定の来歴</td>
+        <td>「なぜこの語彙群だったか」を一言。情報摂取の経路も共有する</td>
+      </tr>
+      <tr>
+        <td class="time">2:00</td>
+        <td>語彙メニュー提示</td>
+        <td>タイトル+一言+理解度ラベル(◎説明できる / ○輪郭はわかる / ?気になるだけ)を見せる</td>
+      </tr>
+      <tr>
+        <td class="time">3:00</td>
+        <td>問い書き捨て</td>
+        <td>聴衆は説明を聞く<strong>前に</strong>、各語への最初の問い・想像をチャットに書き捨てる。凝らない、書き捨てが大事</td>
+      </tr>
+      <tr>
+        <td class="time">12:00</td>
+        <td>好奇心投票 → 深掘り2語</td>
+        <td>聴衆が「一番聞きたい語」に投票し、2語に剪定してしっかり話す。「?」の語が選ばれたら解説の代わりに<strong>公開壁打ちモード</strong>(なぜ気になるか・どこで詰まったかを話し、全員+AIでその場で壁打ち)</td>
+      </tr>
+      <tr>
+        <td class="time">4:00</td>
+        <td>剪定外の語の概要</td>
+        <td>選ばれなかった語も概要ベースで発表。全語に発表責任がある</td>
+      </tr>
+      <tr>
+        <td class="time">8:00</td>
+        <td>対話</td>
+        <td>事前に書き捨てた問いと照らして「予想/期待と何が違ったか」を話す</td>
+      </tr>
+    </table>
+    <p class="note">深掘り語の発表テンプレ: ①その語彙は何か(1-2文) ②なぜ自分は引っかかったか(ここが本体) ③仕事にどう関係しそうか ④壁打ちハイライト(一番理解が進んだ質問と一番無駄だった質問を1つずつ) ⑤まだわかっていないこと。記録は聞いた側の誰かが1語彙1-2行残す。</p>
+  </section>
+
+  <div class="controls">
+    <button onclick="document.querySelectorAll('details.term').forEach(d=>d.open=true)">すべて開く</button>
+    <button onclick="document.querySelectorAll('details.term').forEach(d=>d.open=false)">すべて閉じる</button>
+  </div>
+
+  <!-- 1. サーキットブレイカー -->
+  <details class="term">
+    <summary>
+      <span class="term-title">サーキットブレイカー</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">外部APIやマイクロサービスの連鎖障害を防ぎ、障害時に即座に遮断・代替応答を返す耐障害パターン</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>マイクロサービスや外部SaaS（eKYCベンダーや外部IdPなど）との分散通信において、依存先が過負荷やダウンした際に、リクエストを送り続けてタイムアウト待ちで呼び出し元までリソース（スレッド・コネクション）枯渇で道連れになる連鎖障害（カスケード障害）を防ぐ設計パターン。電気回路のブレーカーのように、「Closed（通常疎通）」「Open（即座に遮断・フォールバック返却）」「Half-Open（試験的疎通）」の3状態を遷移する。</p>
+      <p>NetflixのHystrixやResilience4j、Envoy/Istioなどのサービスメッシュで標準実装されている。単にリトライを繰り返すだけでは障害先へ追い討ちをかけて復旧を阻害するが、サーキットブレイカーを組み合わせることで障害の影響を局所化し、システムの復元力（レジリエンス）を維持する。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 2. Liveness Detection -->
+  <details class="term">
+    <summary>
+      <span class="term-title">Liveness Detection（生体検知 / ライブネス判定）</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">eKYCや顔認証において、提示された顔が「その場にいる生身の人間」か「写真・ディープフェイク・仮面」かを暴く偽造防止技術</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>オンライン本人確認（eKYC）や生体認証において、カメラ越しの顔が「その場に実在する生身の人間（Live）」であるかを判定するセキュリティ技術。写真やディスプレイ再生（リプレイ攻撃）、3Dマスク、さらには生成AIによるリアルタイム・ディープフェイクによるなりすまし攻撃（Presentation Attack）を検知・防御する。</p>
+      <p>手法には、ユーザーに「首を振る」「瞬きする」「指定された表情をする」といった動作を要求する「アクティブ（能動的）判定」と、微小な血流変化（フォトプレチスモグラフィ/rPPG）や皮膚の質感・反射光の歪みをAIで瞬時に解析する「パッシブ（受動的）判定」がある。国際規格ISO/IEC 30107（PAD基準）への準拠が信頼性の指標となっており、UX向上（パッシブ化）と偽造AIの進化とのいたちごっこが続く最前線の領域。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 3. BFF -->
+  <details class="term">
+    <summary>
+      <span class="term-title">BFF (Backend For Frontend)</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">フロントエンドの画面要件・クライアント特性に合わせてAPIの集約・加工・認証セッション管理を行う専用中間層</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>モバイルアプリ、SPA、Web管理画面など、クライアントごとに異なる画面描画要件や通信制約に最適化するために、フロントエンドとマイクロサービス（汎用バックエンドAPI群）の間に配置される専用のサーバーサイド層。Sam Newmanらが提唱。単一の巨大な汎用APIを全クライアントで共有しようとすると、フロントエンド側で大量のAPIを叩いて結合する「過剰フェッチ（Over-fetching）」や通信往復（Chatty I/O）が生じる課題を解消する。</p>
+      <p>実務ではNext.jsやRemixなどのサーバー機能が事実上のBFFとして機能することが多い。また、セキュリティ文脈では「ブラウザのCookieでセッションを保ち、BFF側でIdPのOAuthアクセストークンを安全に保持・リフレッシュしてマイクロサービスへ中継する（Token Handler / BFF Pattern）」という、SPAにおけるトークン漏洩・XSS対策のデファクトスタンダードとしても重要性が高まっている。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 4. AI Harness -->
+  <details class="term">
+    <summary>
+      <span class="term-title">AI Harness</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">自律型AIエージェントに道具・サンドボックス環境・評価ベンチマークを与え、安全かつ決定論的にタスクを遂行・テストさせる実行枠組み</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>LLM単体（モデル）ではなく、LLMが外部ツールやコード実行環境を自律的に操作する「AIエージェント」を動かすための包括的な制御・実行フレームワーク（馬具＝ハーネス）。SWE-benchのようなソフトウェア工学ベンチマークや、Claude Code、OpenHands等のエージェント基盤において、エージェントへのプロンプト注入、ツール呼び出し（Tool Calling）のインターフェース提供、Docker等の隔離サンドボックス環境での安全なコマンド実行、実行ログの追跡・ロールバック機構を担う。</p>
+      <p>AIが自律的になるほど「LLMの賢さ」以上に「エージェントをどんな環境（ハーネス）で囲い、権限を制限し、失敗時にどう復旧させるか」という外側のソフトウェア工学が成果物の品質と安全性を左右するようになり、AIアプリケーション開発の中核概念として注目されている。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 5. DPoP -->
+  <details class="term">
+    <summary>
+      <span class="term-title">DPoP (Demonstrating Proof-of-Possession)</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">OAuth 2.0のアクセストークンをクライアントの公開鍵暗号と紐づけ、トークンが漏洩しても第三者の不正利用を防ぐRFC 9449標準仕様</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>OAuth 2.0やOIDCで長年使われてきた従来のBearerトークンは「持っている者が誰であれ使える（持参人払い）」ため、ネットワーク傍受やXSS等でトークンが盗まれると即座になりすましが可能になるという根本的な脆弱性があった。DPoP（RFC 9449）は、クライアントが生成した公開鍵・秘密鍵ペアを用い、リクエストごとに秘密鍵で署名したJWT（DPoP Proof）をHTTPヘッダーに添付して送信する仕組み。</p>
+      <p>認可サーバーはトークン発行時に公開鍵のフィンガープリント（Thumbprint）をトークン内に埋め込み、リソースサーバーは「トークン」と「リクエストのDPoP Proof署名」の両方を検証することで、秘密鍵を持たない攻撃者がトークンを再利用することを防ぐ。mTLS（相互TLS）と違ってアプリケーション層（HTTP/L7）で完結するため、ロードバランサーやリバースプロキシの裏側、SPA環境でも導入しやすい次世代のセキュリティ標準（FAPI 2.0等でも採用）。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+  <!-- 6. ジェヴォンズのパラドックス -->
+  <details class="term">
+    <summary>
+      <span class="term-title">ジェヴォンズのパラドックス (Jevons Paradox)</span>
+      <span class="label">◎/○/? 記入</span>
+      <span class="oneline">リソースの利用効率を高めてコストやレイテンシを下げると、利用ハードルが下がり逆に全体の総消費量・トラフィックが激増する逆説</span>
+    </summary>
+    <div class="body">
+      <h3>概要</h3>
+      <p>1865年に経済学者ウィリアム・スタンレー・ジェヴォンズが著書『石炭問題』で提唱した逆説。高効率な蒸気機関が開発された際、「石炭の消費効率が上がれば総消費量は減る」と予想されたが、実際には「石炭利用のコストが劇的に下がったことで、製鉄・鉄道・紡績などあらゆる産業で蒸気機関が爆発的に普及し、国全体の石炭消費量は跳ね上がった」という現象。</p>
+      <p>ソフトウェア工学・クラウドインフラでも頻繁に発生する。例えば、DBのクエリ最適化やRedis導入でAPI応答を10msに高速化した結果、フロント側で「軽いから」と頻繁なポーリングや細かな画面更新が乱立して総リクエスト数が100倍になりサーバー増設が必要になるケースや、コンテナの単価削減・オートスケール最適化によって検証環境や新規マイクロサービスが無制限に乱立してAWS請求総額が跳ね上がる現象がこれに該当する。「効率化はコスト削減ではなく、新たな需要の創出である」というガバナンスとキャパシティ設計への教訓を含む。</p>
+      <h3>なぜ引っかかったか(発表者記入)</h3>
+      <div class="fill">ここに発表者が書く</div>
+    </div>
+  </details>
+
+</main>
+</body>
+</html>
